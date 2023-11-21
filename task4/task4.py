@@ -1,9 +1,10 @@
 # String manipulation
 def string1(str):
-  if len(str) < 2:
-    return ''
+    if len(str) < 2:
+        return ''
 
-  return str[0:2] + str[-2:]
+    return str[0:2] + str[-2:]
+
 
 print(string1('Python'))
 
@@ -33,7 +34,6 @@ raw_guess = input(
     """
 )
 
-
 guess = None
 
 while True:
@@ -42,7 +42,6 @@ while True:
         break
     except ValueError as exception:
         raw_guess = input("Wrong format, please try again")
-
 
 
 def expression(operand_1, operand_2, raw_operator):
@@ -55,6 +54,7 @@ def expression(operand_1, operand_2, raw_operator):
     elif raw_operator == "*":
         return round(operand_1 * operand_2, 1)
 
+
 right_answer = round(expression(first_number, second_number, operator))
 if guess == right_answer:
     print("Correct, well done!")
@@ -63,11 +63,11 @@ else:
 
 # The name check
 
-my_name = ("Vitalii")
-my_name == my_name.lower()
-question = (input(" What is your name? "))
-if my_name.lower() == question:
-    print(True)
+stored_name = "vitalii"
+user_input = input("Please enter your name: ")
+
+if user_input.lower() == stored_name:
+    print("True")
 else:
-    my_name != question
-    print(False)
+    print("False")
+
